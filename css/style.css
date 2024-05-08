@@ -1,0 +1,504 @@
+/* global css */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+     
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+    
+}
+
+.title{
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+
+/*nav bar  */
+header{
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+nav{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+
+    
+}
+
+nav .logo{
+    padding: 15px 0;
+}
+
+nav ul{
+    display: block;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    display: block;
+}
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color:red;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    transition: ease-in-out .3s;
+}
+
+nav ul li a:hover::after{
+    width: 70%;
+}
+
+nav .togle-btn{
+    display: none;
+    z-index: 1;
+}
+
+ 
+.main_list{
+    height: 30px;
+    width: 37px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+  }
+  
+  [class^="list__"]{
+    width: 25px;
+    height: 1px;
+    background-color: white;
+    border-radius: 4px;
+    transition: .3s ease-in-out;
+    position: absolute;
+    display: block;
+  }
+  .list__top{
+    top: 0;
+  }
+  
+  .list__middle{
+    top: 10px;
+  }
+  
+  .list__bottom{
+    top: 20px;
+  }
+  .active .list__top{
+    transform: rotate(45deg);
+    top: 10px;
+    
+  }
+  
+  .active .list__middle{
+    opacity: 0;
+  }
+  
+  .active .list__bottom{
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+
+/* srction one */
+.header-section{
+     
+    background:  url(1701423834115.png);
+    background-position:right ;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-clip: content-box;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+.header-section .headear-text{
+    padding-top: 20vh;
+    width: 90%;
+    margin: auto;
+}
+.headear-text p{
+    margin-bottom: 10px;
+}
+.headear-text h1{
+    margin-bottom: 10px;
+    font-size: 120px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url('back.png');
+    -webkit-background-clip: text;
+     background-position: 0 0;
+     animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{background-position: 2000px 0;}
+  }
+
+/* section two */
+.section-two{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+   
+    width: 90%;
+    margin: 80px auto;
+}
+.section-two .sec-two-img{
+    
+    border: 20px solid rgba(102, 98, 98, 0.395);
+    border-radius: 5px;
+}
+.section-two .sec-two-img img{
+    width: 100%;
+    display: block;
+    height: 100%;
+    min-width: 120px;
+    max-height: 500px;
+}
+.section-two .sec-two-text{
+    margin-top: 10px;
+   
+     
+}
+
+.section-two .sec-two-discription{
+    font-size: 16px;
+}
+.sec-two-text .sub-title-box{
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+   
+}
+.sub-title{
+    margin: 20px 30px 10px 0;
+}
+.sub-title{
+  position: relative;
+}
+
+.sub-title::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color:red;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    transition: ease-in-out .3s;
+}
+
+/* .sub-title:hover::after{
+    width: 70%;
+} */
+ 
+.description {
+    display: none;
+    
+   
+}
+.description .name{
+    color: red;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.description .detail{
+    font-size: 20px;
+    margin-top: 4px;
+}
+.block1::after{
+    width: 70%;
+}
+.block{
+    
+    display: block;
+ 
+}
+
+
+/* section three */
+.section-three{
+    width: 90%;
+    margin: 80px auto;
+}
+
+.services-boxses .services-box{
+    background-color: rgba(102, 98, 98, 0.395);
+    padding: 20px;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+.services-boxses .services-box:hover{
+    background-color: red;
+    transform: scale(1.02);
+}
+.services-boxses .services-box:active{
+    transform: scale(.98);
+}
+.services-box .services-sub-title{
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.services-box .services-button{
+    margin: 15px 0;
+} 
+/*  section three $ four &  five*/
+
+.services-boxses, .work-boxces{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+ }
+
+/*  section four */
+.section-four{
+    width: 90%;
+    margin: 80px auto;
+}
+
+.work-box{
+    background: url('IMG_2719.JPG') no-repeat ;
+    background-position: center;
+    background-size: 100%;
+    transition: .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    min-width: 200px;
+    cursor: pointer;
+    border-radius: 7px;
+    position: relative;
+    text-align: center;
+}
+
+.work-box:hover{
+    background-size: 120%;
+}
+.work-box-text{
+    border-radius: 7px;
+    position: absolute;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(255, 0, 0, 0.251), rgb(255, 0, 0));
+    top:100%;
+    bottom: 0;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+    padding: 0 10px;
+}
+
+.work-box:hover .work-box-text{
+   top:0
+}
+
+.work-box-link{
+   background-color: white; 
+   color: black;
+   border-radius: 50%;
+   padding: 10px 15px;
+   margin: 10px 0;
+}
+
+.work-box-title{
+    font-size: 18px;
+    margin: 10px 0;
+}
+.button{
+    display: flex;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 50px;
+    border: 1px solid red;
+    border-radius: 5px;
+    background: black;
+    color: white;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.button:hover{
+    background: red;
+}
+/* section five */
+.section-five{
+    width: 90%;
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+}
+ 
+.section-five .button{
+    background-color: red;
+    margin: 20px 0;
+}
+
+ 
+
+.section-five input, .section-five textarea{
+    display: block;
+    margin: 10px 0;
+    background-color: rgba(114, 111, 111, 0.268);
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    color: white
+}
+
+/* .section-five input:last-of-type{
+    
+    
+} */
+
+
+
+/* fotter */
+
+
+.fotter{
+    text-align: center;
+    background-color: rgba(114, 111, 111, 0.268);
+    padding: 20px 0;
+    color:rgba(135, 135, 135, 0.483)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* media Quary */
+
+@media  (max-width: 800px) {
+    .header-section{
+        background-position: right bottom;
+        background-size: 60%;
+    }
+}
+
+
+@media (max-width: 700px) {
+    /* section one */
+    .headear-text h1{
+        font-size: 80px;
+    } 
+    .section-two{
+        grid-template-columns: auto;
+         
+    }
+    /* section three & four */
+    .services-boxses, .work-boxces{
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media (max-width:500px) {
+    /* nab bar */
+    nav ul{
+        position: fixed;
+ 
+        background-color: rgb(19, 19, 18);
+        top: 0;
+        width: 150px;
+        text-align: center;
+        right: -200px;
+        transition: .3s ease-in-out;
+        height: 100vh;
+    }
+    .active ul {
+        right: 0;
+    }
+   
+    nav ul li {
+        display: block;
+        margin: 0;
+        margin: 20px;
+    }
+    nav ul li:first-of-type{
+        margin-top: 40px;
+    }
+    nav ul li a{
+        display: inline-block;
+    }
+    nav .togle-btn{
+        display: block;
+    }
+    /* section one */
+    .header-section {
+        background-position: left;
+        background-size: cover;
+        height: 70vh;
+    }
+    .headear-text h1{
+        font-size: 60px;
+    }
+    /* section two */
+   
+    .sec-two-img{
+        border: 40px;
+    }
+    .sub-title{
+    margin: 20px 10px 10px 0;
+}
+    /* section three & four */
+ 
+    .services-boxses, .work-boxces{
+        grid-template-columns: repeat(1, auto);
+ 
+    }
+    /* section five */
+
+    .section-five{
+     grid-template-columns: auto;
+    }
+    
+}
+
